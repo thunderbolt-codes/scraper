@@ -36,8 +36,6 @@ app.get('/scrape', async (req, res) => {
 			timeout: 30000
 		});
 
-		await page.waitForTimeout(2000);
-
 		const content = await page.content();
 
 		res.json({ content });
